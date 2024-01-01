@@ -609,8 +609,7 @@ def laguerre(dataframe, gamma=0.75, smooth=1, debug=bool):
     df = dataframe
     g = gamma
     smooth = smooth
-    debug = debug
-    if debug:
+    if debug := debug:
         from pandas import set_option
         set_option('display.max_rows', 2000)
         set_option('display.max_columns', 8)
