@@ -49,7 +49,7 @@ def crossed(series1, series2, direction=None):
     if isinstance(series1, np.ndarray):
         series1 = pd.Series(series1)
 
-    if isinstance(series2, int) or isinstance(series2, float) or isinstance(series2, np.ndarray):
+    if isinstance(series2, (int, float)) or isinstance(series2, np.ndarray):
         series2 = pd.Series(index=series1.index, data=series2)
 
     if direction is None or direction == "above":
